@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
 *,
 *::before,
@@ -17,7 +17,7 @@ main {
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  background-color: #ff8c6b;
+  background-color: rgb(255, 120, 120);
   padding: 2rem;
   display: flex;
   align-items: center;
@@ -31,7 +31,7 @@ main {
   height: 640px;
   background-color: #fff;
   border-radius: 3.3rem;
-  box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+  box-shadow: 0 0 20px 5px rgb(0 0 0 / 32%);
 }
 
 .inner-box {
@@ -74,6 +74,7 @@ form.sign-up-form {
 }
 
 .logo {
+  padding: 10px 0;
   display: flex;
   align-items: center;
 }
@@ -97,7 +98,7 @@ form.sign-up-form {
 }
 
 .heading h6 {
-  color: #bababa;
+  color: rgb(150, 150, 150);
   font-weight: 400;
   font-size: 0.75rem;
   display: inline;
@@ -112,7 +113,7 @@ form.sign-up-form {
 }
 
 .toggle:hover {
-  color: #8371fd;
+  color: rgb(255, 120, 120);
 }
 
 .input-wrap {
@@ -170,21 +171,21 @@ label {
 }
 
 .sign-btn:hover {
-  background-color: #8371fd;
+  background-color: rgb(255, 150, 150);
 }
 
 .text {
-  color: #bbb;
+  color: rgb(150, 150, 150);
   font-size: 0.7rem;
 }
 
 .text a {
-  color: #bbb;
+  color: rgb(150, 150, 150);
   transition: 0.3s;
 }
 
 .text a:hover {
-  color: #8371fd;
+  color: rgb(255, 120, 120);
 }
 
 main.sign-up-mode form.sign-in-form {
@@ -206,12 +207,13 @@ main.sign-up-mode .carousel {
 }
 
 .carousel {
+  padding-top: 30px;
   position: absolute;
   height: 100%;
   width: 55%;
   left: 45%;
   top: 0;
-  background-color: #ffe0d2;
+  background-color: rgb(255, 230, 230);
   border-radius: 2rem;
   display: grid;
   grid-template-rows: auto 1fr;
@@ -227,6 +229,7 @@ main.sign-up-mode .carousel {
 }
 
 .image {
+  padding: 10px 20px;
   width: 100%;
   grid-column: 1/2;
   grid-row: 1/2;
@@ -239,7 +242,7 @@ main.sign-up-mode .carousel {
 }
 
 .img-2 {
-  transform: scale(0.4, 0.5);
+  padding-top: 50px;
 }
 
 .img-3 {
@@ -252,9 +255,9 @@ main.sign-up-mode .carousel {
 }
 
 .text-slider {
+  padding-top: 10px;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
 }
 
