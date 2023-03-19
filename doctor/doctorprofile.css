@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+  padding-top: 140px;
+  font-family: "Poppins", sans-serif;
+  background:rgb(210, 234, 255);
+}
+
+.menubar{
+  height: 70px;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to left,rgb(25,135,205), rgb(50, 160, 205));
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  padding: 10px 2%;
+  justify-content: space-between;
+  z-index: 99;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
+}
+.menubar:hover
+{
+  background: rgb(55, 135, 205);
+}
+.logo img
+{
+  margin-top: 5px;
+  background-color: rgb(193, 231, 255);
+  width: 65px;
+  box-shadow: 0 0 5px 1px rgb(100, 100, 100);
+  border-radius: 32px;
+}
+.menubar .nav-container
+{
+  padding-left: 20px;
+  display: flex;
+}
+.menubar .nav-container ul
+{
+  display: flex;
+}
+.menubar .nav-container ul li
+{
+  padding: 5px 15px;
+  display: inline-block;
+  margin: 0 10px 0 50px;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+.menubar .nav-container ul li a
+{
+  font-size: 15px;
+  color: #fff;
+}
+.menubar .nav-container ul li:hover
+{
+  background:rgb(50, 160, 205);
+}
+
+
+.template{
+  margin-top: 50%;
+  display: block;
+  margin: auto;
+  margin-top: 5%;
+  height: 1000px;
+  width: 70%;
+  border-radius: 30px;
+  background-color: black;
+  margin-bottom: 50px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+}
+
+.photo{
+    margin-top: 5%;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: green;
+    border: 20px solid rgb(210, 234, 255);
+}
+
+.content{
+    position: relative;
+    left: 10%;
+    top: 5%;
+}
+
+.content > h3{
+    position: relative;
+    left: 5%;
+}
+
+.doctor-data{
+    position: relative;
+    left: 10%;
+    top: 15%;
+    color: #fff;
+}
+
+hr{
+    display: block;
+    margin: auto;
+    width: 70%;
+    position: relative;
+    top: 10%;
+}
+.heading
+{
+  font-size: 20px;
+}
+.content
+{
+  padding-top: 15px;
+  font-size: 10px;
+  color:rgb(100, 100, 100);
+}
+
+.view-profile-button{
+  background-color: transparent;
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1100px;
+  min-width: 110px;
+  min-height: 50px;
+  border-radius: 15px;
+  transition: all 0.3s;
+}
+.view-profile-button:hover
+{
+  background-color: white;
+  color:rgb(55, 135, 205)
+}
+
+footer
+{
+  background-color:rgb(52, 52, 52);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+  color: white;
+  padding-bottom: 30px;
+}
+.footer-container
+{
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.footer-container .footer-inner
+{
+  padding: 5px 10px;
+  flex: 1;
+}
+.heading
+{
+  font-size: 20px;
+}
+.content1
+{
+  padding-top: 15px;
+  font-size: 10px;
+  color:rgb(100, 100, 100);
+}
+.footer-inner .inputemail
+{
+  width: 80%;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  height: 25px;
+  box-shadow: 0 0 4px 0 inset rgb(100, 100, 100);
+  padding-left: 5px;
+  font-size: 12px;
+}
+.inputemail::placeholder
+{
+  font-size: 12px;
+}
+.inputemail:focus
+{
+  outline: none;
+}
+.icons
+{
+  padding-top: 10px;
+  text-align: top;
+}
+.icons a
+{
+  color: white;
+}
+.fa.fa-facebook-square
+{
+  font-size: 20px;
+  padding: 0 5px;
+}
+.fa.fa-instagram
+{
+  font-size: 22px;
+  padding: 0 5px;
+}
+.fa.fa-twitter
+{
+  font-size: 21px;
+  padding: 0 5px;
+}
+.fa.fa-linkedin-square
+{
+  font-size: 22px;
+  padding: 0 5px;
+}
+.finalfooter
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+}
+.policy
+{
+  color:rgb(160, 160, 255);
+  text-decoration: underline;
+}

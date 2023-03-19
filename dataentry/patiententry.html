@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="patiententry.css">
+  <title>welcome page doctor</title>
+</head>
+
+<body>
+  <div class="menubar">
+    <div class="logo"><img src="images/logo.svg" alt="logo"></div>
+  <div style="margin-right: 650px; color: white;"><h2>EasyDoc</h2></div>
+    <div class="nav-container">
+      <ul>
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="../aboutus/aboutus.html">ABOUT</a></li>
+        <li><a href="#foot">CONTACT</a></li>
+        <li><a href="../signup/signup.html">LOGIN</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="wrapper-inner">
+      <div class="title-text">
+          <div class="title-signup">Patient Signup Form</div>
+      </div>
+
+      <div class="form-container">
+          <form action="#" class="signup">
+              <div class="field">
+                  <input type="input" id="f-name" placeholder="Enter first name" required>
+              </div>
+              <div class="field">
+                  <input type="input" id="l-name" placeholder="Enter last name" required>
+              </div>
+              <div class="field">
+                  <input type="input" id="age" placeholder="Enter your age" required>
+              </div>
+              <div class="field-1">
+                      <select class="gender">
+                          <option value="0">Select Gender</option>
+                          <option value="1">Male</option>
+                          <option value="2">Female</option>
+                          <option value="3">Others</option>
+                      </select>
+              </div>
+              <div class="field">
+                  <input type="input" id="mobile-no" placeholder="Enter your mobile number" required>
+              </div>
+              <div class="field">
+                  <input type="input" id="weight" placeholder="Enter your weight" required>
+              </div>
+              <div>
+                    <select id="medical-conditions">
+                      <option value="Select disease">Select Medical Condition</option>
+                      <option value="Anthrax">Anthrax</option>
+                      <option value="Chlamydia Infection">Chlamydia Infection</option>
+                      <option value="Chicken Pox">Chicken Pox</option>
+                      <option value="Chickengunya">Chickengunya</option>
+                      <option value="Cholera">Cholera</option>
+                      <option value="COVID 19">COVID 19</option>
+                      <option value="Dengue">Dengue</option>
+                      <option value="Diphtheria">Diphtheria</option>
+                      <option value="Echinococcosis">Echinococcosis</option>
+                      <option value="Enteric Fever">Enteric Fever</option>
+                      <option value="Enterovirus">Enterovirus</option>
+                      <option value="Epidemic louse-bourne typhus">Epidemic louse-bourne typhus</option>
+                      <option value="Escherichia coli Infection">Escherichia coli Infection</option>
+                      <option value="Febros recurrens">Febros recurrens</option>
+                      <option value="Flu">Flu</option>
+                      <option value="Haemophilus infection">Haemophilus infection</option>
+                      <option value="Haemorrhagic fever">Haemorrhagic fever</option>
+                      <option value="Hepatitis">Hepatitis</option>
+                      <option value="HIV">HIV</option>
+                      <option value="Hydatidosis">Hydatidosis</option>
+                      <option value="Influenza A">Influenza A</option>
+                      <option value="Lassa Fever">Lassa Fever</option>
+                      <option value="Leptospirosis">Leptospirosis</option>
+                      <option value="Listeriosis">Listeriosis</option>
+                      <option value="Lyme disease">Lyme disease</option>
+                      <option value="Malaria">Malaria</option>
+                      <option value="Measles">Measles</option>
+                      <option value="Monkey Pox">Monkey Pox</option>
+                      <option value="Mumps">Mumps</option>
+                      <option value="Nipah Virus Disease">Nipah Virus Disease</option>
+                      <option value="Norovirus Infection">Norovirus Infection</option>
+                      <option value="Paratyphoid fever">Paratyphoid fever</option>
+                      <option value="Pertussis">Pertussis</option>
+                      <option value="Piroplasmosis">Piroplasmosis</option>
+                      <option value="Plague">Plague</option>
+                      <option value="Polio">Polio</option>
+                      <option value="Rabies">Rabies</option>
+                      <option value="Rickettsiosis">Rickettsiosis</option>
+                      <option value="Rubella">Rubella</option>
+                      <option value="S. pneumoniae">S. pneumoniae</option>
+                      <option value="Salmonellosis">Salmonellosis</option>
+                      <option value="SARS">SARS</option>
+                      <option value="Smallpox">Smallpox</option>
+                      <option value="STD">STD</option>
+                      <option value="Tetanus">Tetanus</option>
+                      <option value="Tick-borne diseases">Tick-borne diseases</option>
+                      <option value="Tuberculosis">Tuberculosis</option>
+                      <option value="Varicella">Varicella</option>
+                      <option value="Viral Hepatitis">Viral Hepatitis</option>
+                      <option value="Yellow Fever">Yellow Fever</option>
+                      <option value="Zika virus disease">Zika virus disease</option>
+                    </select>
+              </div>
+              <div class="field">
+                  <input type="input" id="symptomps" placeholder="Enter your symptomps" required>
+              </div>
+              <div class="field">
+                  <input type="input" id="allergies" placeholder="Enter allergies if any" required>
+              </div>
+              <div class="field1">
+                  <p id="date-visited">Last visited date : <input class="field1-input" type="date" id="date"></p>
+              </div>
+              <div class="field1">
+                  <label class="record">Upload Previous Medications<input class="field1-input" type="file" id="file" accept="image/*" multiple onchange="myFunction()"></label>
+              </div>
+              <button class="form-submit" type="submit">Submit</button>
+          </form>
+      </div>
+  </div>
+  </div>
+
+  
+  <footer id="foot">
+    <div class="footer-container">
+      <div class="footer-inner">
+        <p class="heading">About Us</p>
+        <p class="content">EasyDoc is on a mission to make quality healthcare affordable and accessible for over a billion+ Indians. We believe in empowering our users with the most accurate, comprehensive, and curated information and care, enabling them to make better healthcare decisions.</p>
+      </div>
+      <div class="footer-inner">
+        <p class="heading">Contact Info</p>
+        <p class="content">Address: Saboo Siddik College, Shepherd Road, Byculla, Mumbai<br>Pincode: 400008<br>Phone: +917700013317<></p>
+      </div>
+      <div class="footer-inner">
+        <p class="heading">Newsletter</p>
+        <p class="content">Get News and know about us more on your email</p>
+        <input class="inputemail" type="email" placeholder="Email">
+      </div>
+      <div class="footer-inner">
+        <p class="heading">Follow Us</p>
+        <p class="content">Let us be social. Follow us on<br>Facebook, Instagram, Twitter, LinkedIn</p>
+        <div class="icons">
+          <a href="#"><i class="fa fa-facebook-square"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin-square"></i></a>
+      </div>
+    </div>
+    </div>
+    <div class="finalfooter">
+      <p>Copyright &copy; 2023 EasyDoc All Rights Reserved<br><a class="policy" href="#">Privacy Policy</a></p>
+    </div>
+  </footer>
+  <script src="signup.js"></script>
+</body>
+</html>

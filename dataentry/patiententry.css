@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+*,
+*::before,
+*::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+body{
+  padding-top: 140px;
+  font-family: "Poppins", sans-serif;
+  background:rgb(210, 234, 255);
+}
+
+.menubar{
+  height: 70px;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to left,rgb(25,135,205), rgb(50, 160, 205));
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  padding: 10px 2%;
+  justify-content: space-between;
+  z-index: 99;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
+}
+.menubar:hover
+{
+  background: rgb(55, 135, 205);
+}
+.logo img
+{
+  margin-top: 5px;
+  background-color: rgb(193, 231, 255);
+  width: 65px;
+  box-shadow: 0 0 5px 1px rgb(100, 100, 100);
+  border-radius: 32px;
+}
+.menubar .nav-container
+{
+  padding-left: 20px;
+  display: flex;
+}
+.menubar .nav-container ul
+{
+  display: flex;
+}
+.menubar .nav-container ul li
+{
+  padding: 5px 15px;
+  display: inline-block;
+  margin: 0 10px 0 50px;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+.menubar .nav-container ul li a
+{
+  font-size: 15px;
+  color: #fff;
+}
+.menubar .nav-container ul li:hover
+{
+  background:rgb(50, 160, 205);
+}
+
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.wrapper-inner
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(50, 160, 205);
+  border: none;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.8);
+  padding: 20px 20px;
+  border-radius: 20px;
+  min-width: 600px;
+}
+.title-text
+{
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+}
+.form-container
+{
+  padding: 30px 0;
+}
+form
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 500px;
+}
+.field
+{
+  width: 90%;
+  padding: 20px 0;
+}
+.field input
+{
+  color: rgb(55, 135, 205);
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  padding-left: 10px;
+  box-shadow: 0 0 5px 0 inset rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+.gender,
+#medical-conditions
+{
+  padding-left: 8px;
+  color:rgb(100, 100, 100);
+  border: none;
+  width: 450px;
+  height: 40px;
+  border-radius: 10px;
+  margin: 20px 0;
+  outline: none;
+  box-shadow: 0 0 5px 0 inset rgba(0, 0, 0, 0.5);
+}
+.field1
+{
+  color: white;
+}
+.field1 .field1-input
+{
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 0 0 5px 0 inset rgba(0, 0, 0, 0.5);
+  margin: 20px 0;
+}
+input[type="file"] {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+.record {
+  margin: 10px;
+  display: inline-block;
+  background-color: #4285f4;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.record:hover {
+  background-color: #3c78d8;
+}
+
+input[type="file"]:focus + .record {
+  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.5);
+}
+
+.form-submit
+{
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  color: rgb(55, 135, 205);
+  background-color: white;
+  margin-top: 30px;
+  padding: 5px 10px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+}
+.form-submit:hover
+{
+  color: white;
+  background-color: rgb(55, 135, 205);
+}
+
+footer
+{
+  background-color:rgb(52, 52, 52);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+  color: white;
+  padding-bottom: 30px;
+}
+.footer-container
+{
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.footer-container .footer-inner
+{
+  padding: 5px 10px;
+  flex: 1;
+}
+.heading
+{
+  font-size: 20px;
+}
+.content
+{
+  padding-top: 15px;
+  font-size: 10px;
+  color:rgb(100, 100, 100);
+}
+.footer-inner .inputemail
+{
+  width: 80%;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  height: 25px;
+  box-shadow: 0 0 4px 0 inset rgb(100, 100, 100);
+  padding-left: 5px;
+  font-size: 12px;
+}
+.inputemail::placeholder
+{
+  font-size: 12px;
+}
+.inputemail:focus
+{
+  outline: none;
+}
+.icons
+{
+  padding-top: 10px;
+  text-align: top;
+}
+.icons a
+{
+  color: white;
+}
+.fa.fa-facebook-square
+{
+  font-size: 20px;
+  padding: 0 5px;
+}
+.fa.fa-instagram
+{
+  font-size: 22px;
+  padding: 0 5px;
+}
+.fa.fa-twitter
+{
+  font-size: 21px;
+  padding: 0 5px;
+}
+.fa.fa-linkedin-square
+{
+  font-size: 22px;
+  padding: 0 5px;
+}
+.finalfooter
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+}
+.policy
+{
+  color:rgb(160, 160, 255);
+  text-decoration: underline;
+}
