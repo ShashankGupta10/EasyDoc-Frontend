@@ -35,13 +35,22 @@ body{
 {
   background: rgb(55, 135, 205);
 }
+.logo
+{
+  display: flex;
+  align-items: center;
+}
 .logo img
 {
-  margin-top: 5px;
   background-color: rgb(193, 231, 255);
   width: 65px;
   box-shadow: 0 0 5px 1px rgb(100, 100, 100);
   border-radius: 32px;
+}
+.logo h2
+{
+  color: white;
+  margin-left: 20px;
 }
 .menubar .nav-container
 {
