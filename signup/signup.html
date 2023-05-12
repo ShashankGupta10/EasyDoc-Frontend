@@ -30,7 +30,7 @@
                   <input
                     type="text"
                     minlength="4"
-                    class="input-field"
+                    class="input-field input-signin-name"
                     autocomplete="off"
                     required
                   />
@@ -41,14 +41,19 @@
                   <input
                     type="password"
                     minlength="4"
-                    class="input-field"
+                    class="input-field input-signin-password"
                     autocomplete="off"
                     required
                   />
                   <label>Password</label>
                 </div>
 
-                <input type="submit" value="Sign In" class="sign-btn" />
+                <input
+                  type="submit"
+                  value="Sign In"
+                  class="sign-btn"
+                  onclick="getSigninData()"
+                />
 
                 <p class="text">
                   Forgot your password or you login details?
@@ -75,7 +80,7 @@
                   <input
                     type="text"
                     minlength="4"
-                    class="input-field"
+                    class="input-field input-name"
                     autocomplete="off"
                     required
                   />
@@ -85,7 +90,7 @@
                 <div class="input-wrap">
                   <input
                     type="email"
-                    class="input-field"
+                    class="input-field input-email"
                     autocomplete="off"
                     required
                   />
@@ -96,14 +101,19 @@
                   <input
                     type="password"
                     minlength="4"
-                    class="input-field"
+                    class="input-field input-password"
                     autocomplete="off"
                     required
                   />
                   <label>Password</label>
                 </div>
 
-                <input type="submit" value="Sign Up" class="sign-btn" />
+                <input
+                  type="submit"
+                  value="Sign Up"
+                  class="sign-btn"
+                  onclick="getSignupData()"
+                />
 
                 <p class="text">
                   By signing up, I agree to the

@@ -37,3 +37,35 @@ function moveSlider() {
 bullets.forEach((bullet) => {
   bullet.addEventListener("click", moveSlider);
 });
+
+const getSignupData = () => {
+  const inputName = document.querySelector(".input-name").value;
+  const email = document.querySelector(".input-email").value;
+  const password = document.querySelector(".input-password").value;
+
+  return { inputName, email, password };
+};
+
+const getSigninData = () => {
+  const inputSignName = document.querySelector(".input-signin-name").value;
+  const inputSignPassword = document.querySelector(".input-signin-password").value;
+  console.log(inputSignName, inputSignPassword)
+  return { inputSignName, inputSignPassword };
+};
+
+const signupData = async () => {
+  const { inputName, email, password } = getSignupData();
+  await axios.post("http://127.0.0.1:5500/signup/", {
+    name: inputName,
+    email: email,
+    password: password,
+  });
+};
+
+const signinData = async () => {
+  const { inputSignName, inputSignPassword } = getSigninData();
+  await axios.post("http://127.0.0.1:5500/signin/", {
+    name: inputSignName,
+    password: inputSignPassword,
+  });
+};
