@@ -4,6 +4,7 @@ const main = document.querySelector("main");
 const bullets = document.querySelectorAll(".bullets span");
 const images = document.querySelectorAll(".image");
 
+
 inputs.forEach((inp) => {
   inp.addEventListener("focus", () => {
     inp.classList.add("active");
@@ -38,14 +39,6 @@ bullets.forEach((bullet) => {
   bullet.addEventListener("click", moveSlider);
 });
 
-const getSignupData = () => {
-  const inputName = document.querySelector(".input-name").value;
-  const email = document.querySelector(".input-email").value;
-  const password = document.querySelector(".input-password").value;
-
-  return { inputName, email, password };
-};
-
 const getSigninData = () => {
   const inputSignName = document.querySelector(".input-signin-name").value;
   const inputSignPassword = document.querySelector(".input-signin-password").value;
@@ -53,19 +46,37 @@ const getSigninData = () => {
   return { inputSignName, inputSignPassword };
 };
 
-const signupData = async () => {
-  const { inputName, email, password } = getSignupData();
-  await axios.post("http://127.0.0.1:5500/signup/", {
-    name: inputName,
+
+const signupform = document.querySelector(".sign-up-form")
+signupform.addEventListener("submit",(e)=>{
+  signUpProcess(e)
+})
+
+
+async function signUpProcess(e){
+  e.preventDefault();
+  console.log("clicked")
+  const inputName = document.querySelector(".input-name").value;
+  const email = document.querySelector(".input-email").value;
+  const password = document.querySelector(".input-password").value;
+  console.log(inputName, email, password)
+  await axios.post("https://easydoc-ut70.onrender.com/signup", {
+    username: inputName,
     email: email,
     password: password,
-  });
+  })
+  .then((res)=>{
+    console.log(res.data)
+  })
 };
 
 const signinData = async () => {
   const { inputSignName, inputSignPassword } = getSigninData();
-  await axios.post("http://127.0.0.1:5500/signin/", {
+  await axios.post("https://easydoc-ut70.onrender.com/signin", {
     name: inputSignName,
     password: inputSignPassword,
-  });
+  })
+  .then((res)=>{
+    console.log(res.data)
+  })
 };
