@@ -53,7 +53,6 @@ signupform.addEventListener("submit",(e)=>{
 
 
 async function signUpProcess(e){
-  e.preventDefault();
   const inputName = document.querySelector(".input-name").value;
   const email = document.querySelector(".input-email").value;
   const password = document.querySelector(".input-password").value;
@@ -74,11 +73,10 @@ signinform.addEventListener("submit",(e)=>{
 })
 
 async function signInProcess(e){
-  e.preventDefault()
   const inputSignName = document.querySelector(".input-signin-name").value;
   const inputSignPassword = document.querySelector(".input-signin-password").value;
   console.log(inputSignName, inputSignPassword)
-  await axios.post("https://easydoc-ut70.onrender.com/signin", {
+  await axios.post("https://easydoc-ut70.onrender.com/login", {
     username: inputSignName,
     password: inputSignPassword,
   })
