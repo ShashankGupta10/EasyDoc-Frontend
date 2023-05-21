@@ -4,7 +4,6 @@ const main = document.querySelector("main");
 const bullets = document.querySelectorAll(".bullets span");
 const images = document.querySelectorAll(".image");
 
-
 inputs.forEach((inp) => {
   inp.addEventListener("focus", () => {
     inp.classList.add("active");
@@ -40,48 +39,48 @@ bullets.forEach((bullet) => {
 });
 
 const getSigninData = () => {
-
-  console.log(inputSignName, inputSignPassword)
+  console.log(inputSignName, inputSignPassword);
   return { inputSignName, inputSignPassword };
 };
 
+const signupform = document.querySelector(".sign-up-form");
+signupform.addEventListener("submit", (e) => {
+  signUpProcess(e);
+});
 
-const signupform = document.querySelector(".sign-up-form")
-signupform.addEventListener("submit",(e)=>{
-  signUpProcess(e)
-})
-
-
-async function signUpProcess(e){
+async function signUpProcess(e) {
   const inputName = document.querySelector(".input-name").value;
   const email = document.querySelector(".input-email").value;
   const password = document.querySelector(".input-password").value;
-  console.log(inputName, email, password)
-  await axios.post("https://easydoc-ut70.onrender.com/signup", {
-    username: inputName,
-    email: email,
-    password: password,
-  })
-  .then((res)=>{
-    console.log(res.data)
-  })
-};
+  console.log(inputName, email, password);
+  await axios
+    .post("https://easydoc-ut70.onrender.com/signup", {
+      username: inputName,
+      email: email,
+      password: password,
+    })
+    .then((res) => {
+      console.log(res.data);
+    });
+}
 
-const signinform = document.querySelector(".sign-in-form")
-signinform.addEventListener("submit",(e)=>{
-  signInProcess(e)
-})
+const signinform = document.querySelector(".sign-in-form");
+signinform.addEventListener("submit", (e) => {
+  signInProcess(e);
+});
 
-async function signInProcess(e){
+async function signInProcess(e) {
   const inputSignName = document.querySelector(".input-signin-name").value;
-  const inputSignPassword = document.querySelector(".input-signin-password").value;
-  console.log(inputSignName, inputSignPassword)
-  await axios.post("https://easydoc-ut70.onrender.com/login", {
-    username: inputSignName,
-    password: inputSignPassword,
-  })
-  .then((res)=>{
-    console.log(res.data)
-  })
-
+  const inputSignPassword = document.querySelector(
+    ".input-signin-password"
+  ).value;
+  console.log(inputSignName, inputSignPassword);
+  await axios
+    .post("https://easydoc-ut70.onrender.com/login", {
+      username: inputSignName,
+      password: inputSignPassword,
+    })
+    .then((res) => {
+      console.log(res.data);
+    });
 }
