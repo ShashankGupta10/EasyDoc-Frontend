@@ -40,8 +40,7 @@ bullets.forEach((bullet) => {
 });
 
 const getSigninData = () => {
-  const inputSignName = document.querySelector(".input-signin-name").value;
-  const inputSignPassword = document.querySelector(".input-signin-password").value;
+
   console.log(inputSignName, inputSignPassword)
   return { inputSignName, inputSignPassword };
 };
@@ -55,7 +54,6 @@ signupform.addEventListener("submit",(e)=>{
 
 async function signUpProcess(e){
   e.preventDefault();
-  console.log("clicked")
   const inputName = document.querySelector(".input-name").value;
   const email = document.querySelector(".input-email").value;
   const password = document.querySelector(".input-password").value;
@@ -70,13 +68,22 @@ async function signUpProcess(e){
   })
 };
 
-const signinData = async () => {
-  const { inputSignName, inputSignPassword } = getSigninData();
+const signinform = document.querySelector(".sign-in-form")
+signinform.addEventListener("submit",(e)=>{
+  signInProcess(e)
+})
+
+async function signInProcess(e){
+  e.preventDefault()
+  const inputSignName = document.querySelector(".input-signin-name").value;
+  const inputSignPassword = document.querySelector(".input-signin-password").value;
+  console.log(inputSignName, inputSignPassword)
   await axios.post("https://easydoc-ut70.onrender.com/signin", {
-    name: inputSignName,
+    username: inputSignName,
     password: inputSignPassword,
   })
   .then((res)=>{
     console.log(res.data)
   })
-};
+
+}
